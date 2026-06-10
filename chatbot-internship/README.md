@@ -12,7 +12,8 @@ An interactive, multi-tiered conversational ecosystem built using the **Java Spr
 ## 🏗️ Architectural Core Design
 
 The system implements strict **Model-View-Controller (MVC)** isolation to govern secure communication vectors across nodes.
-[ Client Browser (HTML5/JS) ] 
+
+   [ Client Browser (HTML5/JS) ] 
                  │  ▲
     JSON Payload │  │ Asynchronous JSON Response
                  ▼  │
@@ -22,6 +23,7 @@ The system implements strict **Model-View-Controller (MVC)** isolation to govern
                  ▼  │
 [ Core Processing Service: ChatService ]
       (NLP Token Filters & FAQ Routing)
+
 1. **Presentation Layer:** A light, high-fidelity responsive interface leveraging non-blocking modern UI rendering. Communication with the underlying system is handled entirely over asynchronous JSON transactions via client-side fetch modules.
 2. **REST API Gateway Layer:** Receives ingress transmission bundles, performing parsing logic and serialization routines securely before handing tasks to backend modules.
 3. **NLP Processing Engine:** Normalizes inputs using character filtering strategies (case-folding and punctuation isolation) to parse patterns smoothly against automated question trees.
@@ -51,9 +53,12 @@ chatbot-internship/
         └── resources/
             └── static/
                 └── index.html                  # Asynchronous Client View Port
+
 💻 Enterprise Code Architectures
 1. Unified Interface Processing (Service Layer)
 Designed with modular decoupling paradigms in mind; this structural core handles message normalization safely.
+
+Java
 package com.internship.chatbot.service;
 
 import org.springframework.stereotype.Service;
